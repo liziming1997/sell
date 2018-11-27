@@ -1,0 +1,24 @@
+package com.lzm.sell.dto;
+
+import lombok.Data;
+
+/**
+ * @ClassName CartDTO
+ * @Author LZM
+ * @Date 2018/11/25 16:51
+ * @Version 1.0
+ **/
+@Data
+public class CartDTO {
+
+    /*商品id*/
+    private String productId;
+
+    /*商品数量*/
+    private Integer productQuantity;
+
+    public CartDTO(String productId, Integer productQuantity) {
+        this.productId = productId;
+        this.productQuantity = productQuantity;
+    }
+}
