@@ -87,7 +87,6 @@ public class BuyerOrderController {
     @PostMapping("/cancel")
     public ResultVO<OrderDTO> cancel(@RequestParam("openid") String openid,
                                      @RequestParam("orderid") String orderid){
-        //TODO 不安全的做法，没有检验openid
         OrderDTO orderDTO = buyerService.cancelOrder(openid,orderid);
         return ResultVOUtil.success();
 
